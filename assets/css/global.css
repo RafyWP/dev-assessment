@@ -1,0 +1,48 @@
+.header-right-menu .wp-block-navigation-link {
+    border-bottom: 1px solid transparent;
+}
+
+.header-right-menu .current-menu-item, .header-right-menu .wp-block-navigation-link:hover {
+    border-bottom: 1px solid var(--wp--preset--color--custom-lp-colors-main-greens-secondary);
+}
+
+.header-right-menu .current-menu-item a.wp-block-navigation-item__content, .header-right-menu .wp-block-navigation-link:hover a.wp-block-navigation-item__content {
+    color: var(--wp--preset--color--custom-lp-colors-main-greens-secondary);
+}
+
+.card-reviews {
+    box-shadow: 60px 42px 120px 0px rgba(0, 0, 0, 0.08);
+}
+
+.with-link-sub a {
+    text-decoration: underline;
+}
+
+body .popup-block {
+    display: none;
+    max-width: 720px;
+    position: fixed;
+    top: calc(50vh - 250px);
+    left: calc(50vw - 360px);
+    z-index: 2;
+}
+
+.popup-block.active {
+    display: flex;
+}
+
+.wp-block-column:has(.popup-block)::before {
+    display: none;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+}
+
+.wp-block-column:has(.popup-block.active)::before {
+    display: block;
+}
